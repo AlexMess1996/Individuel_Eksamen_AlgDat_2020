@@ -78,10 +78,10 @@ public class EksamenSBinTre<T> {
 
         return s.toString();
     }
-
     public boolean tom() {
         return antall == 0;
     }
+
 //Oppgave 1
     public boolean leggInn(T verdi) {
         Objects.requireNonNull(verdi, "Går ikke med nullverdier");
@@ -111,6 +111,33 @@ public class EksamenSBinTre<T> {
 
     }
 
+    //End av Oppgave 1
+
+
+    //Oppgave 2
+    public int antall(T verdi) {
+        Node<T> p = rot;
+
+        int antallVerdi = 0;
+
+        while (p != null){
+            int cmp = comp.compare(verdi, p.verdi);
+
+            if (cmp < 0){
+                p = p.venstre;
+            }else {
+                if (cmp == 0){
+                    antallVerdi++;
+                }
+                p = p.høyre;
+            }
+        }
+        return antallVerdi;
+    }
+    //End av Oppgave 2
+
+
+
     public boolean fjern(T verdi) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
@@ -119,9 +146,7 @@ public class EksamenSBinTre<T> {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
 
-    public int antall(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
+
 
     public void nullstill() {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
@@ -157,10 +182,25 @@ public class EksamenSBinTre<T> {
 
 
 public static void main(String []args){
+
+
+    /* //Oppgave1
     Integer[] a = {4,7,2,9,5,10,8,1,3,6};
     EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
     for (int verdi : a) tre.leggInn(verdi);
     System.out.println(tre.antall());
+    */
+
+    /* //Oppgave2
+    Integer[] a = {4,7,2,9,4,10,8,7,4,6};
+EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
+for (int verdi : a) tre.leggInn(verdi);
+System.out.println(tre.antall());
+System.out.println(tre.antall(5));
+System.out.println(tre.antall(4));
+System.out.println(tre.antall(7));
+System.out.println(tre.antall(10));
+    */
 }
 
 } // ObligSBinTre

@@ -151,11 +151,21 @@ public class EksamenSBinTre<T> {
     }
 
     private static <T> Node<T> nestePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+       if (p.forelder == null) {
+           return p;
+       }
+
+       if (p == p.forelder.høyre || p.forelder.høyre == null){
+           p = p.forelder;
+       }else{
+           p = førstePostorden(p.forelder.høyre);
+       }
+       return p;
     }
 
     //End av Oppgave 3
 
+    //Oppgave 6
     public boolean fjern(T verdi) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
@@ -169,6 +179,8 @@ public class EksamenSBinTre<T> {
     public void nullstill() {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
+    //End av oppgave6
+
 
 
 
@@ -213,6 +225,8 @@ System.out.println(tre.antall(4));
 System.out.println(tre.antall(7));
 System.out.println(tre.antall(10));
     */
+
+
 }
 
 } // ObligSBinTre

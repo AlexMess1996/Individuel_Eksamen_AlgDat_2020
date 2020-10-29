@@ -239,8 +239,30 @@ public class EksamenSBinTre<T> {
 
 
     public void nullstill() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        nullstillSubtre(rot);
+        rot = null;
     }
+    private void nullstillSubtre(Node<T> node) {
+        if (node == null) return;
+
+        if (node.venstre != null) {
+            nullstillSubtre(node.venstre);
+            node.venstre = null;
+        }
+
+        if (node.høyre != null) {
+            nullstillSubtre(node.høyre);
+            node.høyre = null;
+        }
+
+        node.forelder = null;
+        node.verdi = null;
+        endringer++;
+        antall--;
+    }
+
+
+
     //End av oppgave6
 
 

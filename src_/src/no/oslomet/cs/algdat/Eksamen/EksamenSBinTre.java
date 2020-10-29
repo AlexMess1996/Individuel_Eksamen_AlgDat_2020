@@ -136,7 +136,25 @@ public class EksamenSBinTre<T> {
     }
     //End av Oppgave 2
 
+    //Oppgave 3
+    private static <T> Node<T> førstePostorden(Node<T> p) {
+        while (p.venstre != null || p.høyre != null){
+            if (p.venstre != null){
+                p = p.venstre;
+            } else{
+                p = p.høyre;
+            }
 
+        }
+
+        return p;
+    }
+
+    private static <T> Node<T> nestePostorden(Node<T> p) {
+        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    }
+
+    //End av Oppgave 3
 
     public boolean fjern(T verdi) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
@@ -152,13 +170,7 @@ public class EksamenSBinTre<T> {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
 
-    private static <T> Node<T> førstePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
 
-    private static <T> Node<T> nestePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
 
     public void postorden(Oppgave<? super T> oppgave) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");

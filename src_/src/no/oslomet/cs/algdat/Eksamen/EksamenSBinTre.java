@@ -165,6 +165,32 @@ public class EksamenSBinTre<T> {
 
     //End av Oppgave 3
 
+
+    //Oppgave 4
+    public void postorden(Oppgave<? super T> oppgave) {
+        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    }
+
+    public void postordenRecursive(Oppgave<? super T> oppgave) {
+        postordenRecursive(rot, oppgave);
+    }
+
+    private void postordenRecursive(Node<T> p, Oppgave<? super T> oppgave) {
+        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    }
+
+    //End av oppgave 4
+
+    //Oppgave 5
+    public ArrayList<T> serialize() {
+        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    }
+
+    static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
+        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    }
+    //End av oppgave 5
+
     //Oppgave 6
     public boolean fjern(T verdi) {
         if(verdi == null) {
@@ -180,7 +206,7 @@ public class EksamenSBinTre<T> {
             }else if(cmp > 0){
                 q = p;
                 p = p.høyre;
-            }
+            } else break;
 
         }
         if (p == null) {
@@ -260,32 +286,6 @@ public class EksamenSBinTre<T> {
         endringer++;
         antall--;
     }
-
-    //Oppgave 4
-    public void postorden(Oppgave<? super T> oppgave) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
-
-    public void postordenRecursive(Oppgave<? super T> oppgave) {
-        postordenRecursive(rot, oppgave);
-    }
-
-    private void postordenRecursive(Node<T> p, Oppgave<? super T> oppgave) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
-
-    //End av oppgave 4
-
-    //Oppgave 5
-    public ArrayList<T> serialize() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
-
-    static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
-    }
-    //End av oppgave 5
-
     //End av oppgave 6
 
 
@@ -295,29 +295,6 @@ public class EksamenSBinTre<T> {
 
 
 
-public static void main(String []args){
 
-
-    /* //Oppgave1
-    Integer[] a = {4,7,2,9,5,10,8,1,3,6};
-    EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
-    for (int verdi : a) tre.leggInn(verdi);
-    System.out.println(tre.antall());
-    */
-
-    /* //Oppgave2
-    Integer[] a = {4,7,2,9,4,10,8,7,4,6};
-EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
-for (int verdi : a) tre.leggInn(verdi);
-System.out.println(tre.antall());
-System.out.println(tre.antall(5));
-System.out.println(tre.antall(4));
-System.out.println(tre.antall(7));
-System.out.println(tre.antall(10));
-    */
-
-
-
-}
 
 } // ObligSBinTre

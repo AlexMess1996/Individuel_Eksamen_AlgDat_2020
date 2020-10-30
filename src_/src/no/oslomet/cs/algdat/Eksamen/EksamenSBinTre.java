@@ -261,13 +261,7 @@ public class EksamenSBinTre<T> {
         antall--;
     }
 
-
-
-    //End av oppgave6
-
-
-
-
+    //Oppgave 4
     public void postorden(Oppgave<? super T> oppgave) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
@@ -280,6 +274,9 @@ public class EksamenSBinTre<T> {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
 
+    //End av oppgave 4
+
+    //Oppgave 5
     public ArrayList<T> serialize() {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
@@ -287,6 +284,15 @@ public class EksamenSBinTre<T> {
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
+    //End av oppgave 5
+
+    //End av oppgave 6
+
+
+
+
+
+
 
 
 public static void main(String []args){
@@ -309,6 +315,7 @@ System.out.println(tre.antall(4));
 System.out.println(tre.antall(7));
 System.out.println(tre.antall(10));
     */
+
 
 
 }
